@@ -1,0 +1,11 @@
+function sumAll(arr) {
+  var max =arr.sort((a,b)=>(a>b?1:-1));
+  let total = 0;
+  for (let i = max[0]; i<= max[1]; i++){
+    total+=i
+  }
+  console.log(total)
+  return total
+}
+
+sumAll([5, 10]);

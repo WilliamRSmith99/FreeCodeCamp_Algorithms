@@ -1,0 +1,17 @@
+function uniteUnique(...n) {
+  let hold = [...n];
+  let arr = [];
+  for (let i in hold){
+    for (let x in hold[i]){
+//console.log(arr.includes(hold[i][x]) === false)
+      if (arr.includes(hold[i][x]) != true){
+        arr.push(hold[i][x]);  
+      } 
+    }
+  }
+  
+  console.log(arr)
+  return arr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);

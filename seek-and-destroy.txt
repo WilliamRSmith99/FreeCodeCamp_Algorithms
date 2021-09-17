@@ -1,0 +1,9 @@
+function destroyer(arr, ...n) {
+  let array = arr.slice();
+  let constr = [...n]
+ let newArr = (array.filter(arr => (constr.includes(arr)=== false)))
+  console.log(newArr)
+  return newArr;
+}
+
+destroyer(["possum", "trollo", 12, "safari", "hotdog", 92, 65, "grandma", "bugati", "trojan", "yacht"], "yacht", "possum", "trollo", "safari", "hotdog", "grandma", "bugati", "trojan");

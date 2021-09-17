@@ -1,0 +1,40 @@
+function palindrome(str) {
+  let sent = str.split("");
+  let arr = [];
+  let back = [];
+  for (let i in sent){
+    if (sent[i] != "_"){
+      if ( sent[i] != " "){
+        if (sent[i] != "."){
+          if (sent[i] != ","){
+            if(sent[i] != "-"){
+              if(sent[i] != "("){
+                if(sent[i] != ")"){
+                  arr.push(sent[i])
+                }
+              }              
+            }
+          }
+        }
+      }
+    } 
+  }
+  for (let i =0; i<arr.length;i++){
+    back.unshift(arr[i])
+  }
+  arr=arr.join("").toLowerCase();
+  back=back.join("").toLowerCase();
+  console.log(arr);
+  console.log(back);
+  if (arr === back){
+    return true
+  }
+  else{
+    return false
+  }
+  
+}
+
+
+
+palindrome("0_0 (: /-\ :) 0-0");

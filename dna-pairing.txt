@@ -1,0 +1,27 @@
+function pairElement(str) {
+  str = str.split("");
+  let fin = [];
+  for (let i in str){
+    let x = [str[i],];
+    if (x == 'G'){
+      x.push("C");
+    }
+    if (x == 'C'){
+      x.push("G");
+    }
+    if (x == 'A'){
+      x.push("T");
+    }
+    if (x == 'T'){
+      x.push("A");
+    }
+    if (x == 'A'){
+      x.push("T");
+    }
+    fin.push(x);
+  }
+  console.log(fin)
+  return fin;
+}
+
+pairElement("ATCGA");
